@@ -77,6 +77,7 @@ class AudioFileWaveforms extends StatefulWidget {
     Key? key,
     required this.size,
     required this.playerController,
+    required this.onChangeSeek,
     this.waveformData = const [],
     this.continuousWaveform = true,
     this.playerWaveStyle = const PlayerWaveStyle(),
@@ -89,7 +90,6 @@ class AudioFileWaveforms extends StatefulWidget {
     this.clipBehavior = Clip.none,
     this.waveformType = WaveformType.long,
     this.enableSeekGesture = true,
-    required this.onChangeSeek,
   }) : super(key: key);
 
   @override
