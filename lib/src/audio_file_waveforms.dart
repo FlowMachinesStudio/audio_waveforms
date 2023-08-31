@@ -346,6 +346,8 @@ class _AudioFileWaveformsState extends State<AudioFileWaveforms>
       _proportion = (details.delta.dx - start) /
           (_waveformData.length * widget.playerWaveStyle.spacing);
     }
+	var seekPosition = widget.playerController.maxDuration * _proportion;
+	widget.onChangeSeek(seekPosition.toInt());
     if (mounted) setState(() {});
   }
 
